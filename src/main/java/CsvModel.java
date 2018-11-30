@@ -1,5 +1,4 @@
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Objects;
 
 public class CsvModel implements Serializable {
@@ -10,7 +9,7 @@ public class CsvModel implements Serializable {
     private String callStartDateTime;
     private String callResponseDateTime;
 
-    public CsvModel() {
+    CsvModel() {
     }
 
     public CsvModel(String clientId, String callId, Integer callTime, String callStartDateTime, String callResponseDateTime) {
@@ -21,43 +20,43 @@ public class CsvModel implements Serializable {
         this.callResponseDateTime = callResponseDateTime;
     }
 
-    public String getClientId() {
+    String getClientId() {
         return clientId;
     }
 
-    public void setClientId(String clientId) {
+    void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
-    public String getCallId() {
+    String getCallId() {
         return callId;
     }
 
-    public void setCallId(String callId) {
+    void setCallId(String callId) {
         this.callId = callId;
     }
 
-    public Integer getCallTime() {
+    Integer getCallTime() {
         return callTime;
     }
 
-    public void setCallTime(Integer callTime) {
+    void setCallTime(Integer callTime) {
         this.callTime = callTime;
     }
 
-    public String getCallStartDateTime() {
+    String getCallStartDateTime() {
         return callStartDateTime;
     }
 
-    public void setCallStartDateTime(String callStartDateTime) {
+    void setCallStartDateTime(String callStartDateTime) {
         this.callStartDateTime = callStartDateTime;
     }
 
-    public String getCallResponseDateTime() {
+    String getCallResponseDateTime() {
         return callResponseDateTime;
     }
 
-    public void setCallResponseDateTime(String callResponseDateTime) {
+    void setCallResponseDateTime(String callResponseDateTime) {
         this.callResponseDateTime = callResponseDateTime;
     }
 

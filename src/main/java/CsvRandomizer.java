@@ -6,6 +6,7 @@ import java.util.Random;
 public class CsvRandomizer {
 
     private static CsvModel csvModel = new CsvModel();
+    private static final int ENTRY_SIZE = 1000000;
 
     public static void main(String[] args) throws IOException {
         fileWriter();
@@ -14,7 +15,7 @@ public class CsvRandomizer {
     private static void fileWriter() throws IOException {
 
         try(FileWriter fw = new FileWriter(Util.FILE_DIR + "/" + "output.csv")){
-            for (long i = 0; i < 1000000; i++) {
+            for (long i = 0; i < ENTRY_SIZE; i++) {
                 long leftLimit = 1001L;
                 long rightLimit = 5001L;
                 long generatedLong = Math.abs(leftLimit + (long) (Math.random() * (rightLimit - leftLimit)));

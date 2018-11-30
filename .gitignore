@@ -2,3 +2,6 @@
 *.iml
 target/
 csv-folder/
+.classpath
+.project
+.settings/

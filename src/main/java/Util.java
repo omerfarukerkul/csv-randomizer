@@ -1,12 +1,13 @@
-import java.io.*;
+import java.io.File;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.*;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public final class Util {
+final class Util {
 
-    public static File FILE_DIR = new File(System.getProperty("user.dir"), "csv-folder");
+    static File FILE_DIR = new File(System.getProperty("user.dir"), "csv-folder");
 
     static {
         if (!FILE_DIR.exists()) {
@@ -14,7 +15,7 @@ public final class Util {
         }
     }
 
-    public static Date randomizeDate(){
+    static Date randomizeDate() {
         Date d1 = new GregorianCalendar(2010, 1, 1).getTime();
         Date d2 = new Date();
 
@@ -24,14 +25,14 @@ public final class Util {
         return randomDate;
     }
 
-    public static String formatDate(Date randomDate){
+    static String formatDate(Date randomDate) {
         SimpleDateFormat smp = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         String formatted = smp.format(randomDate);
 
         return formatted;
     }
 
-    public static String randomizeClientId(){
+    static String randomizeClientId() {
         final StringBuilder strb = new StringBuilder();
         final Random rand = new Random();
 
@@ -40,15 +41,5 @@ public final class Util {
         strb.append(rand.nextInt(10));
         return strb.toString();
     }
-
-
-
-    public static void makeRow() throws IOException {
-        final Random random = new Random();
-
-
-
-    }
-
 
 }
