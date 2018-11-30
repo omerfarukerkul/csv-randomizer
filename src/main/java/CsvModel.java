@@ -79,11 +79,6 @@ public class CsvModel implements Serializable {
 
     @Override
     public String toString() {
-        return  "clientId='" + clientId + '\'' +
-                ", callId='" + callId + '\'' +
-                ", callTime=" + callTime +
-                ", callStartDateTime='" + callStartDateTime + '\'' +
-                ", callResponseDateTime='" + callResponseDateTime + '\'' +
-                '}';
+        return clientId + ',' + callId + ','+ callTime + ',' + callStartDateTime + ',' + callResponseDateTime;
     }
 }
